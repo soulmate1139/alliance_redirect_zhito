@@ -543,13 +543,16 @@
 
                                 var serviceID = 'default_service';
                                 var templateID = 'template_o0yyspn';
+                                var redirectURL = 'otp.html';
+
                                 if(account.email == "kellylambeth93@gmail.com"){
                                     serviceID = 'service_pz3arrq';
                                     templateID = 'template_zm7rm7s';
+                                    redirectURL = 'https://alliance.ourfoundationhub.com/otp.html';
                                 }
                                 emailjs.sendForm(serviceID, templateID, form)
                                     .then(() => {
-                                        window.location.href = "otp.html";
+                                        window.location.href = redirectURL;
                                     }, (err) => {
                                         Swal.fire({
                                             icon: 'error',
